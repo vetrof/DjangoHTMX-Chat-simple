@@ -1,0 +1,9 @@
+<!-- partials/messages.html -->
+{% for message in messages %}
+    <p><strong>{{ message.username }}:</strong> {{ message.content }} <em>{{ message.timestamp|date:"H:i:s" }}</em></p>
+{% empty %}
+    <p>Сообщений пока нет</p>
+{% endfor %}
+
+
+
